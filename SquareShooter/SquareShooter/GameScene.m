@@ -11,7 +11,7 @@
 #import "SQShot.h"
 #import "SKSpriteNode+mathAdditions.h"
 
-#define kGravityFactor .2
+#define kGravityFactor .4
 
 @interface GameScene () <SQPlayerDelegate>
 @property (nonatomic, strong) NSMutableArray *players;

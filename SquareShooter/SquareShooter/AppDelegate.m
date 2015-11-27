@@ -33,7 +33,18 @@
     self.controllerBrowser = [[ControllerBrowser alloc] initWithName:@"SquareShooter"];
     self.controllerBrowser.delegate = self;
     [self.controllerBrowser start];
-    // Override point for customization after application launch.
+    
+#ifdef DEBUG
+    for (NSString* family in [UIFont familyNames])
+    {
+        NSLog(@"%@", family);
+        
+        for (NSString* name in [UIFont fontNamesForFamilyName: family])
+        {
+            NSLog(@"  %@", name);
+        }
+    }
+#endif
     return YES;
 }
 

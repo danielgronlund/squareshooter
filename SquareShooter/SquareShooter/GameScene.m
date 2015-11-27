@@ -11,6 +11,7 @@
 #import "SQShot.h"
 #import "SKSpriteNode+mathAdditions.h"
 
+
 #define kGravityFactor .4
 
 @interface GameScene () <SQPlayerDelegate>
@@ -32,6 +33,9 @@
 @implementation GameScene
 
 -(void)didMoveToView:(SKView *)view {
+    
+
+    
     self.deadPlayers = [NSMutableArray new];
     self.gameAnnouncementsLabel = [[SKLabelNode alloc] initWithFontNamed:@"ArialRoundedMTBold"];
     self.gameAnnouncementsLabel.fontSize = 80;
@@ -64,7 +68,7 @@
     CGSize screenSize = [[UIScreen mainScreen] bounds].size;
     
     self.gameAnnouncementsLabel.position = CGPointMake(screenSize.width / 2, 100);
-    
+  
     for (int i = 0; i < 6;  i ++ ) {
         SKSpriteNode *cloud = [SKSpriteNode spriteNodeWithImageNamed:@"cloud"];
         [self addChild:cloud];
@@ -164,7 +168,7 @@
     };
     
     //    self.player.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.player.size];
-    player.position = CGPointMake(300, 600);
+    player.position = CGPointMake(600, 600);
     //    self.player.physicsBody.friction = 5.0;
     //    self.player.physicsBody.linearDamping = 2.0;
     //    self.player.physicsBody.restitution = 0;

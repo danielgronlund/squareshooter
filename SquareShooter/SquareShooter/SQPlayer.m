@@ -24,7 +24,8 @@
 - (instancetype)initWithColor:(UIColor *)color {
     self = [super initWithImageNamed:@"body"];
     if (self) {
-        self.physicsBody = [[SKPhysicsBody alloc] init];
+        self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(self.size.width, self.size.height)];
+        self.physicsBody.allowsRotation = NO;
         self.physicsBody.dynamic = YES;
         //self.color = color;
         //self.colorBlendFactor = 1.0;

@@ -109,11 +109,24 @@
     self.activeShots = [NSMutableArray new];
     
     controller.leftThumbstick.valueChangedHandler = ^(float xAxis, float yAxis) {
-        NSLog(@"%f, %f", xAxis, yAxis);
-        player.velocity = CGVectorMake(xAxis, yAxis);
+        player.velocity = CGVectorMake(xAxis * 50, -yAxis * 50);
     };
     
-    player = [[SQPlayer alloc] initWithColor:[SKColor redColor]];
+    controller.rightThumbstick.valueChangedHandler = ^(float xAxis, float yAxis) {
+        [player aimInDirection:CGVectorMake(xAxis, -yAxis)];
+    };
+    
+    controller.rightShoulder.valueChangedHandler = ^(float value, BOOL pressed) {
+        if (pressed) {
+            [player fire];
+        }
+    };
+    controller.rightTrigger.valueChangedHandler = ^(float value, BOOL pressed) {
+        if (pressed) {
+            [player fire];
+        }
+    };
+    
     //    self.player.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.player.size];
     player.position = CGPointMake(300, 600);
     //    self.player.physicsBody.friction = 5.0;
@@ -154,19 +167,23 @@
 
 #pragma mark - ControllerBrowserDelegate
 - (void)controllerBrowser:(ControllerBrowser *)browser controllerConnected:(Controller *)controller type:(enum ControllerType)type {
-    for (void (^callback)(Controller *controller) in self.controllerConnectedCallbacks) {
-        callback(controller);
-    }
-    [self.controllers addObject:controller];
-    
-    [self setUpPlayerWithController:controller];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        for (void (^callback)(Controller *controller) in self.controllerConnectedCallbacks) {
+            callback(controller);
+        }
+        
+        [self.controllers addObject:controller];
+        [self setUpPlayerWithController:controller];
+    });
 }
 
 - (void)controllerBrowser:(ControllerBrowser *)browser controllerDisconnected:(Controller *)controller {
-    for (void (^callback)(Controller *controller) in self.controllerDisconnectedCallbacks) {
-        callback(controller);
-    }
-    [self.controllers removeObject:controller];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        for (void (^callback)(Controller *controller) in self.controllerDisconnectedCallbacks) {
+            callback(controller);
+        }
+        [self.controllers removeObject:controller];
+    });
 }
 
 - (void)controllerBrowser:(ControllerBrowser *)browser encounteredError:(NSError * _Nonnull)error {

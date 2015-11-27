@@ -38,11 +38,15 @@
 - (void)updatePhysics
 {
     self.physicsBody.velocity = CGVectorMake(self.physicsBody.velocity.dx + (self.velocity.dx * self.yScale), self.physicsBody.velocity.dy + (self.velocity.dy * self.yScale));
-    if (![self.delegate touchIsDown]) self.velocity = CGVectorMake(self.velocity.dx * .90, self.velocity.dy * .90);
     
     if (arc4random() % 30 == 2) {
         [self aimInDirection:CGVectorMake(-5 + arc4random() % 10, -5 + arc4random() % 10)];
     }
+}
+
+- (void)setVelocity:(CGVector)velocity
+{
+    _velocity = velocity;
 }
 
 - (void)aimInDirection:(CGVector)direction
@@ -50,7 +54,6 @@
     CGPoint dir = (CGPoint) {.x = direction.dx, .y = direction.dy};
     CGFloat angle = [self pointPairToBearingDegrees:CGPointZero secondPoint:dir];
     self.arm.zRotation = angle;
-    [self fire];
 }
 
 - (void)fire {

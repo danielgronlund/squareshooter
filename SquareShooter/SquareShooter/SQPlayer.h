@@ -25,6 +25,8 @@
 - (instancetype)initWithColor:(UIColor *)color;
 - (void)updatePhysics;
 - (CGPoint)initialShotPosition;
+- (void)aimInDirection:(CGVector)direction;
+- (void)fire;
 
 - (void)showNameLabel;
 

@@ -62,10 +62,9 @@ public final class ControllerBrowser : NSObject, HIDManagerDelegate, NSNetServic
     public weak var delegate: ControllerBrowserDelegate?
     
     public var controllers: [Controller] {
-        return [Array(mfiControllers.values), Array(remoteControllers.values), Array(hidControllers)].flatMap { $0 }
+        return [Array(mfiControllers.values), remotePeers.flatMap { $1.controllers.values }, Array(hidControllers)].flatMap { $0 }
     }
     private var mfiControllers: [GCControllerPlayerIndex:Controller] = [:]
-    private var remoteControllers: [String:Controller] = [:]
     private var hidControllers: Set<Controller> = []
     
     private let controllerTypes: Set<ControllerType>
@@ -84,7 +83,7 @@ public final class ControllerBrowser : NSObject, HIDManagerDelegate, NSNetServic
     private let queueable: DispatchQueueable
     
     public convenience init(name: String) {
-        self.init(name: name, controllerTypes: [.MFi, .HID, .Remote])
+        self.init(name: name, controllerTypes: [.Remote])
     }
     
     public init(name: String, serviceIdentifier: String = "controllerkit", controllerTypes: Set<ControllerType>) {

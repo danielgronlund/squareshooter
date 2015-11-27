@@ -15,7 +15,26 @@
 		33B34C451C08512200A40625 /* Game.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33B34C441C08512200A40625 /* Game.xcassets */; };
 		33B34C481C08512200A40625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33B34C461C08512200A40625 /* Main.storyboard */; };
 		33B34C4A1C08512200A40625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33B34C491C08512200A40625 /* Assets.xcassets */; };
+		F6D5050F1C08828200347298 /* Act.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D5050D1C08828200347298 /* Act.framework */; };
+		F6D505101C08828200347298 /* Act.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6D5050D1C08828200347298 /* Act.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6D505111C08828200347298 /* ControllerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D5050E1C08828200347298 /* ControllerKit.framework */; };
+		F6D505121C08828200347298 /* ControllerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6D5050E1C08828200347298 /* ControllerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F6D5050C1C087B1C00347298 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F6D505101C08828200347298 /* Act.framework in Embed Frameworks */,
+				F6D505121C08828200347298 /* ControllerKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		33B34C331C08512200A40625 /* SquareShooter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquareShooter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +50,8 @@
 		33B34C471C08512200A40625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33B34C491C08512200A40625 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33B34C4B1C08512200A40625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6D5050D1C08828200347298 /* Act.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Act.framework; path = ../../Carthage/Build/tvOS/Act.framework; sourceTree = "<group>"; };
+		F6D5050E1C08828200347298 /* ControllerKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ControllerKit.framework; path = ../../Carthage/Build/tvOS/ControllerKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D5050F1C08828200347298 /* Act.framework in Frameworks */,
+				F6D505111C08828200347298 /* ControllerKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				33B34C351C08512200A40625 /* SquareShooter */,
+				F6D504E51C08625400347298 /* Frameworks */,
 				33B34C341C08512200A40625 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +111,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F6D504E51C08625400347298 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6D5050D1C08828200347298 /* Act.framework */,
+				F6D5050E1C08828200347298 /* ControllerKit.framework */,
+			);
+			name = Frameworks;
+			path = SquareShooter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,6 +131,7 @@
 				33B34C2F1C08512200A40625 /* Sources */,
 				33B34C301C08512200A40625 /* Frameworks */,
 				33B34C311C08512200A40625 /* Resources */,
+				F6D5050C1C087B1C00347298 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -264,6 +299,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/tvOS/";
 				INFOPLIST_FILE = SquareShooter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielgronlund.experiments.SquareShooter;
@@ -276,6 +313,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/tvOS/";
 				INFOPLIST_FILE = SquareShooter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielgronlund.experiments.SquareShooter;
@@ -302,6 +341,7 @@
 				33B34C501C08512200A40625 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,6 @@
+[submodule "Carthage/Checkouts/Act"]
+	path = Carthage/Checkouts/Act
+	url = https://github.com/Goos/Act.git
+[submodule "CocoaAsyncSocket"]
+	path = CocoaAsyncSocket
+	url = https://github.com/Goos/CocoaAsyncSocket.git

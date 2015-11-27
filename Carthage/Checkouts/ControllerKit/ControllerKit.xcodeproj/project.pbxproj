@@ -1,0 +1,866 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F632C9801BE44F6F008D94E3 /* HIDInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CA35E91BE3B66600A08132 /* HIDInput.swift */; };
+		F632C9811BE44F6F008D94E3 /* ControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8B01BDD96DC00167F45 /* ControllerInput.swift */; };
+		F632C9821BE44F6F008D94E3 /* RemoteInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8B21BDD976600167F45 /* RemoteInput.swift */; };
+		F632C9831BE44F6F008D94E3 /* GCControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8B41BDD9AF300167F45 /* GCControllerInput.swift */; };
+		F632C9841BE44F6F008D94E3 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8A21BDC493500167F45 /* Controller.swift */; };
+		F632C9851BE44F6F008D94E3 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8AA1BDC68AA00167F45 /* Observable.swift */; };
+		F632C9861BE44F6F008D94E3 /* Copyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8AC1BDC6A4500167F45 /* Copyable.swift */; };
+		F632C9871BE44F6F008D94E3 /* ControllerBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8A61BDC4EC300167F45 /* ControllerBrowser.swift */; };
+		F632C9881BE44F6F008D94E3 /* ClosureTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8F51BDEE50A00167F45 /* ClosureTimer.swift */; };
+		F632C9891BE44F6F008D94E3 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8B61BDDA1FE00167F45 /* Client.swift */; };
+		F632C98A1BE44F6F008D94E3 /* ControllerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F65EA8881BDC388B00167F45 /* ControllerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F632C98B1BE44F81008D94E3 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F65EA8E51BDED6DB00167F45 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F632C98C1BE44F81008D94E3 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8E61BDED6DB00167F45 /* GCDAsyncSocket.m */; };
+		F632C98D1BE44F81008D94E3 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F65EA8E71BDED6DB00167F45 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F632C98E1BE44F81008D94E3 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8E81BDED6DB00167F45 /* GCDAsyncUdpSocket.m */; };
+		F632C98F1BE44F81008D94E3 /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F65EA8ED1BDED6E700167F45 /* AsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F632C9901BE44F81008D94E3 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8EE1BDED6E700167F45 /* AsyncSocket.m */; };
+		F632C9911BE44F81008D94E3 /* AsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F65EA8EF1BDED6E700167F45 /* AsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F632C9921BE44F81008D94E3 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8F01BDED6E700167F45 /* AsyncUdpSocket.m */; };
+		F632C9A31BE51945008D94E3 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F632C9A21BE51945008D94E3 /* Connection.swift */; };
+		F632C9A41BE51945008D94E3 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F632C9A21BE51945008D94E3 /* Connection.swift */; };
+		F632C9A51BE51945008D94E3 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F632C9A21BE51945008D94E3 /* Connection.swift */; };
+		F6345F761C06696300C2ACE3 /* Gamepad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6345F751C06696300C2ACE3 /* Gamepad.swift */; };
+		F6345F771C06696300C2ACE3 /* Gamepad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6345F751C06696300C2ACE3 /* Gamepad.swift */; };
+		F6345F781C06696300C2ACE3 /* Gamepad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6345F751C06696300C2ACE3 /* Gamepad.swift */; };
+		F65EA8891BDC388B00167F45 /* ControllerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F65EA8881BDC388B00167F45 /* ControllerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F65EA8901BDC388B00167F45 /* ControllerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65EA8851BDC388B00167F45 /* ControllerKit.framework */; };
+		F65EA8951BDC388B00167F45 /* ControllerKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8941BDC388B00167F45 /* ControllerKitTests.swift */; };
+		F65EA8A01BDC44C900167F45 /* Act.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65EA89F1BDC44C900167F45 /* Act.framework */; };
+		F65EA8A31BDC493500167F45 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8A21BDC493500167F45 /* Controller.swift */; };
+		F65EA8A51BDC49B700167F45 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65EA8A41BDC49B700167F45 /* GameController.framework */; };
+		F65EA8A71BDC4EC400167F45 /* ControllerBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8A61BDC4EC300167F45 /* ControllerBrowser.swift */; };
+		F65EA8AB1BDC68AA00167F45 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8AA1BDC68AA00167F45 /* Observable.swift */; };
+		F65EA8AD1BDC6A4500167F45 /* Copyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8AC1BDC6A4500167F45 /* Copyable.swift */; };
+		F65EA8B11BDD96DC00167F45 /* ControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8B01BDD96DC00167F45 /* ControllerInput.swift */; };
+		F65EA8B31BDD976600167F45 /* RemoteInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8B21BDD976600167F45 /* RemoteInput.swift */; };
+		F65EA8B51BDD9AF300167F45 /* GCControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8B41BDD9AF300167F45 /* GCControllerInput.swift */; };
+		F65EA8B71BDDA1FE00167F45 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8B61BDDA1FE00167F45 /* Client.swift */; };
+		F65EA8E91BDED6DB00167F45 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F65EA8E51BDED6DB00167F45 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F65EA8EA1BDED6DB00167F45 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8E61BDED6DB00167F45 /* GCDAsyncSocket.m */; };
+		F65EA8EB1BDED6DB00167F45 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F65EA8E71BDED6DB00167F45 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F65EA8EC1BDED6DB00167F45 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8E81BDED6DB00167F45 /* GCDAsyncUdpSocket.m */; };
+		F65EA8F11BDED6E700167F45 /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F65EA8ED1BDED6E700167F45 /* AsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F65EA8F21BDED6E700167F45 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8EE1BDED6E700167F45 /* AsyncSocket.m */; };
+		F65EA8F31BDED6E700167F45 /* AsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F65EA8EF1BDED6E700167F45 /* AsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F65EA8F41BDED6E700167F45 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8F01BDED6E700167F45 /* AsyncUdpSocket.m */; };
+		F65EA8F61BDEE50A00167F45 /* ClosureTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8F51BDEE50A00167F45 /* ClosureTimer.swift */; };
+		F65EA94B1BDEFC8000167F45 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65EA9351BDEF99B00167F45 /* GameController.framework */; };
+		F65EA94C1BDEFC9100167F45 /* Act.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65EA9391BDEF9E700167F45 /* Act.framework */; };
+		F65EA94D1BDEFCBE00167F45 /* ControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8B01BDD96DC00167F45 /* ControllerInput.swift */; };
+		F65EA94E1BDEFCBE00167F45 /* RemoteInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8B21BDD976600167F45 /* RemoteInput.swift */; };
+		F65EA94F1BDEFCBE00167F45 /* GCControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8B41BDD9AF300167F45 /* GCControllerInput.swift */; };
+		F65EA9501BDEFCBE00167F45 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8A21BDC493500167F45 /* Controller.swift */; };
+		F65EA9511BDEFCBE00167F45 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8AA1BDC68AA00167F45 /* Observable.swift */; };
+		F65EA9521BDEFCBE00167F45 /* Copyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8AC1BDC6A4500167F45 /* Copyable.swift */; };
+		F65EA9531BDEFCBE00167F45 /* ControllerBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8A61BDC4EC300167F45 /* ControllerBrowser.swift */; };
+		F65EA9541BDEFCBE00167F45 /* ClosureTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8F51BDEE50A00167F45 /* ClosureTimer.swift */; };
+		F65EA9551BDEFCBE00167F45 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8B61BDDA1FE00167F45 /* Client.swift */; };
+		F65EA9561BDEFCBE00167F45 /* ControllerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F65EA8881BDC388B00167F45 /* ControllerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F65EA9571BDEFCCD00167F45 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F65EA8E51BDED6DB00167F45 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F65EA9581BDEFCCD00167F45 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8E61BDED6DB00167F45 /* GCDAsyncSocket.m */; };
+		F65EA9591BDEFCCD00167F45 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F65EA8E71BDED6DB00167F45 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F65EA95A1BDEFCCD00167F45 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8E81BDED6DB00167F45 /* GCDAsyncUdpSocket.m */; };
+		F65EA95B1BDEFCCD00167F45 /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F65EA8ED1BDED6E700167F45 /* AsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F65EA95C1BDEFCCD00167F45 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8EE1BDED6E700167F45 /* AsyncSocket.m */; };
+		F65EA95D1BDEFCCD00167F45 /* AsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F65EA8EF1BDED6E700167F45 /* AsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F65EA95E1BDEFCCD00167F45 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F65EA8F01BDED6E700167F45 /* AsyncUdpSocket.m */; };
+		F695B6E81BE8DD670014C34C /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F695B6E71BE8DD670014C34C /* GameController.framework */; };
+		F6A6E8AA1BEA832800BC9809 /* Act.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A6E8A91BEA832800BC9809 /* Act.framework */; };
+		F6CA35E81BE3AF7400A08132 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CA35E71BE3AF7400A08132 /* IOKit.framework */; };
+		F6CA35EA1BE3B66600A08132 /* HIDInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CA35E91BE3B66600A08132 /* HIDInput.swift */; };
+		F6CA35EB1BE3B66600A08132 /* HIDInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CA35E91BE3B66600A08132 /* HIDInput.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F65EA8911BDC388B00167F45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F65EA87C1BDC388B00167F45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F65EA8841BDC388B00167F45;
+			remoteInfo = ControllerKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F632C9781BE44F2F008D94E3 /* ControllerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ControllerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F632C9A21BE51945008D94E3 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		F6345F751C06696300C2ACE3 /* Gamepad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gamepad.swift; sourceTree = "<group>"; };
+		F65EA8851BDC388B00167F45 /* ControllerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ControllerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F65EA8881BDC388B00167F45 /* ControllerKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControllerKit.h; sourceTree = "<group>"; };
+		F65EA88A1BDC388B00167F45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F65EA88F1BDC388B00167F45 /* ControllerKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControllerKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F65EA8941BDC388B00167F45 /* ControllerKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerKitTests.swift; sourceTree = "<group>"; };
+		F65EA8961BDC388B00167F45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F65EA89F1BDC44C900167F45 /* Act.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Act.framework; path = Carthage/Build/iOS/Act.framework; sourceTree = "<group>"; };
+		F65EA8A21BDC493500167F45 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		F65EA8A41BDC49B700167F45 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
+		F65EA8A61BDC4EC300167F45 /* ControllerBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerBrowser.swift; sourceTree = "<group>"; };
+		F65EA8AA1BDC68AA00167F45 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		F65EA8AC1BDC6A4500167F45 /* Copyable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Copyable.swift; sourceTree = "<group>"; };
+		F65EA8B01BDD96DC00167F45 /* ControllerInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerInput.swift; sourceTree = "<group>"; };
+		F65EA8B21BDD976600167F45 /* RemoteInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteInput.swift; sourceTree = "<group>"; };
+		F65EA8B41BDD9AF300167F45 /* GCControllerInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCControllerInput.swift; sourceTree = "<group>"; };
+		F65EA8B61BDDA1FE00167F45 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		F65EA8E51BDED6DB00167F45 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = CocoaAsyncSocket/Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
+		F65EA8E61BDED6DB00167F45 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = CocoaAsyncSocket/Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
+		F65EA8E71BDED6DB00167F45 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = CocoaAsyncSocket/Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		F65EA8E81BDED6DB00167F45 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = CocoaAsyncSocket/Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		F65EA8ED1BDED6E700167F45 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = CocoaAsyncSocket/Source/RunLoop/AsyncSocket.h; sourceTree = "<group>"; };
+		F65EA8EE1BDED6E700167F45 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = CocoaAsyncSocket/Source/RunLoop/AsyncSocket.m; sourceTree = "<group>"; };
+		F65EA8EF1BDED6E700167F45 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncUdpSocket.h; path = CocoaAsyncSocket/Source/RunLoop/AsyncUdpSocket.h; sourceTree = "<group>"; };
+		F65EA8F01BDED6E700167F45 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncUdpSocket.m; path = CocoaAsyncSocket/Source/RunLoop/AsyncUdpSocket.m; sourceTree = "<group>"; };
+		F65EA8F51BDEE50A00167F45 /* ClosureTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureTimer.swift; sourceTree = "<group>"; };
+		F65EA9351BDEF99B00167F45 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
+		F65EA9391BDEF9E700167F45 /* Act.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Act.framework; path = Carthage/Build/Mac/Act.framework; sourceTree = "<group>"; };
+		F65EA9431BDEFC6200167F45 /* ControllerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ControllerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F695B6E71BE8DD670014C34C /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.0.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
+		F6A6E8A91BEA832800BC9809 /* Act.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Act.framework; path = Carthage/Build/tvOS/Act.framework; sourceTree = "<group>"; };
+		F6CA35E71BE3AF7400A08132 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		F6CA35E91BE3B66600A08132 /* HIDInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIDInput.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F632C9741BE44F2F008D94E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F695B6E81BE8DD670014C34C /* GameController.framework in Frameworks */,
+				F6A6E8AA1BEA832800BC9809 /* Act.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F65EA8811BDC388B00167F45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F65EA8A51BDC49B700167F45 /* GameController.framework in Frameworks */,
+				F65EA8A01BDC44C900167F45 /* Act.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F65EA88C1BDC388B00167F45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F65EA8901BDC388B00167F45 /* ControllerKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F65EA93F1BDEFC6200167F45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6CA35E81BE3AF7400A08132 /* IOKit.framework in Frameworks */,
+				F65EA94B1BDEFC8000167F45 /* GameController.framework in Frameworks */,
+				F65EA94C1BDEFC9100167F45 /* Act.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F65EA87B1BDC388B00167F45 = {
+			isa = PBXGroup;
+			children = (
+				F65EA8871BDC388B00167F45 /* ControllerKit */,
+				F65EA8931BDC388B00167F45 /* ControllerKitTests */,
+				F65EA8861BDC388B00167F45 /* Products */,
+				F65EA8BF1BDED63000167F45 /* Vendor */,
+				F65EA8A11BDC44D300167F45 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F65EA8861BDC388B00167F45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F65EA8851BDC388B00167F45 /* ControllerKit.framework */,
+				F65EA88F1BDC388B00167F45 /* ControllerKitTests.xctest */,
+				F65EA9431BDEFC6200167F45 /* ControllerKit.framework */,
+				F632C9781BE44F2F008D94E3 /* ControllerKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F65EA8871BDC388B00167F45 /* ControllerKit */ = {
+			isa = PBXGroup;
+			children = (
+				F65EA8A21BDC493500167F45 /* Controller.swift */,
+				F6345F751C06696300C2ACE3 /* Gamepad.swift */,
+				F632C9A21BE51945008D94E3 /* Connection.swift */,
+				F6CA35E91BE3B66600A08132 /* HIDInput.swift */,
+				F65EA8B01BDD96DC00167F45 /* ControllerInput.swift */,
+				F65EA8B21BDD976600167F45 /* RemoteInput.swift */,
+				F65EA8B41BDD9AF300167F45 /* GCControllerInput.swift */,
+				F65EA8AA1BDC68AA00167F45 /* Observable.swift */,
+				F65EA8AC1BDC6A4500167F45 /* Copyable.swift */,
+				F65EA8A61BDC4EC300167F45 /* ControllerBrowser.swift */,
+				F65EA8F51BDEE50A00167F45 /* ClosureTimer.swift */,
+				F65EA8B61BDDA1FE00167F45 /* Client.swift */,
+				F65EA8881BDC388B00167F45 /* ControllerKit.h */,
+				F65EA88A1BDC388B00167F45 /* Info.plist */,
+			);
+			path = ControllerKit;
+			sourceTree = "<group>";
+		};
+		F65EA8931BDC388B00167F45 /* ControllerKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				F65EA8941BDC388B00167F45 /* ControllerKitTests.swift */,
+				F65EA8961BDC388B00167F45 /* Info.plist */,
+			);
+			path = ControllerKitTests;
+			sourceTree = "<group>";
+		};
+		F65EA8A11BDC44D300167F45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6A6E8A81BEA831400BC9809 /* tvOS */,
+				F65EA93B1BDEF9F400167F45 /* OSX */,
+				F65EA93C1BDEF9FA00167F45 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F65EA8BF1BDED63000167F45 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				F65EA8E41BDED6CE00167F45 /* AsyncSocket */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		F65EA8E41BDED6CE00167F45 /* AsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				F65EA8E51BDED6DB00167F45 /* GCDAsyncSocket.h */,
+				F65EA8E61BDED6DB00167F45 /* GCDAsyncSocket.m */,
+				F65EA8E71BDED6DB00167F45 /* GCDAsyncUdpSocket.h */,
+				F65EA8E81BDED6DB00167F45 /* GCDAsyncUdpSocket.m */,
+				F65EA8ED1BDED6E700167F45 /* AsyncSocket.h */,
+				F65EA8EE1BDED6E700167F45 /* AsyncSocket.m */,
+				F65EA8EF1BDED6E700167F45 /* AsyncUdpSocket.h */,
+				F65EA8F01BDED6E700167F45 /* AsyncUdpSocket.m */,
+			);
+			name = AsyncSocket;
+			sourceTree = "<group>";
+		};
+		F65EA93B1BDEF9F400167F45 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				F6CA35E71BE3AF7400A08132 /* IOKit.framework */,
+				F65EA9391BDEF9E700167F45 /* Act.framework */,
+				F65EA9351BDEF99B00167F45 /* GameController.framework */,
+			);
+			name = OSX;
+			sourceTree = "<group>";
+		};
+		F65EA93C1BDEF9FA00167F45 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F65EA8A41BDC49B700167F45 /* GameController.framework */,
+				F65EA89F1BDC44C900167F45 /* Act.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F6A6E8A81BEA831400BC9809 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				F6A6E8A91BEA832800BC9809 /* Act.framework */,
+				F695B6E71BE8DD670014C34C /* GameController.framework */,
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F632C9751BE44F2F008D94E3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F632C9911BE44F81008D94E3 /* AsyncUdpSocket.h in Headers */,
+				F632C98D1BE44F81008D94E3 /* GCDAsyncUdpSocket.h in Headers */,
+				F632C98F1BE44F81008D94E3 /* AsyncSocket.h in Headers */,
+				F632C98B1BE44F81008D94E3 /* GCDAsyncSocket.h in Headers */,
+				F632C98A1BE44F6F008D94E3 /* ControllerKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F65EA8821BDC388B00167F45 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F65EA8891BDC388B00167F45 /* ControllerKit.h in Headers */,
+				F65EA8E91BDED6DB00167F45 /* GCDAsyncSocket.h in Headers */,
+				F65EA8F31BDED6E700167F45 /* AsyncUdpSocket.h in Headers */,
+				F65EA8F11BDED6E700167F45 /* AsyncSocket.h in Headers */,
+				F65EA8EB1BDED6DB00167F45 /* GCDAsyncUdpSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F65EA9401BDEFC6200167F45 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F65EA9561BDEFCBE00167F45 /* ControllerKit.h in Headers */,
+				F65EA95D1BDEFCCD00167F45 /* AsyncUdpSocket.h in Headers */,
+				F65EA9591BDEFCCD00167F45 /* GCDAsyncUdpSocket.h in Headers */,
+				F65EA95B1BDEFCCD00167F45 /* AsyncSocket.h in Headers */,
+				F65EA9571BDEFCCD00167F45 /* GCDAsyncSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F632C9771BE44F2F008D94E3 /* ControllerKit-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F632C97F1BE44F2F008D94E3 /* Build configuration list for PBXNativeTarget "ControllerKit-tvOS" */;
+			buildPhases = (
+				F632C9731BE44F2F008D94E3 /* Sources */,
+				F632C9741BE44F2F008D94E3 /* Frameworks */,
+				F632C9751BE44F2F008D94E3 /* Headers */,
+				F632C9761BE44F2F008D94E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ControllerKit-tvOS";
+			productName = "ControllerKit-tvOS";
+			productReference = F632C9781BE44F2F008D94E3 /* ControllerKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F65EA8841BDC388B00167F45 /* ControllerKit-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F65EA8991BDC388B00167F45 /* Build configuration list for PBXNativeTarget "ControllerKit-iOS" */;
+			buildPhases = (
+				F65EA8801BDC388B00167F45 /* Sources */,
+				F65EA8811BDC388B00167F45 /* Frameworks */,
+				F65EA8821BDC388B00167F45 /* Headers */,
+				F65EA8831BDC388B00167F45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ControllerKit-iOS";
+			productName = ControllerKit;
+			productReference = F65EA8851BDC388B00167F45 /* ControllerKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F65EA88E1BDC388B00167F45 /* ControllerKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F65EA89C1BDC388B00167F45 /* Build configuration list for PBXNativeTarget "ControllerKitTests" */;
+			buildPhases = (
+				F65EA88B1BDC388B00167F45 /* Sources */,
+				F65EA88C1BDC388B00167F45 /* Frameworks */,
+				F65EA88D1BDC388B00167F45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F65EA8921BDC388B00167F45 /* PBXTargetDependency */,
+			);
+			name = ControllerKitTests;
+			productName = ControllerKitTests;
+			productReference = F65EA88F1BDC388B00167F45 /* ControllerKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F65EA9421BDEFC6200167F45 /* ControllerKit-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F65EA9481BDEFC6200167F45 /* Build configuration list for PBXNativeTarget "ControllerKit-OSX" */;
+			buildPhases = (
+				F65EA93E1BDEFC6200167F45 /* Sources */,
+				F65EA93F1BDEFC6200167F45 /* Frameworks */,
+				F65EA9401BDEFC6200167F45 /* Headers */,
+				F65EA9411BDEFC6200167F45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ControllerKit-OSX";
+			productName = "ControllerKit-OSX";
+			productReference = F65EA9431BDEFC6200167F45 /* ControllerKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F65EA87C1BDC388B00167F45 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Robin Goos";
+				TargetAttributes = {
+					F632C9771BE44F2F008D94E3 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					F65EA8841BDC388B00167F45 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					F65EA88E1BDC388B00167F45 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					F65EA9421BDEFC6200167F45 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = F65EA87F1BDC388B00167F45 /* Build configuration list for PBXProject "ControllerKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F65EA87B1BDC388B00167F45;
+			productRefGroup = F65EA8861BDC388B00167F45 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F65EA8841BDC388B00167F45 /* ControllerKit-iOS */,
+				F65EA9421BDEFC6200167F45 /* ControllerKit-OSX */,
+				F632C9771BE44F2F008D94E3 /* ControllerKit-tvOS */,
+				F65EA88E1BDC388B00167F45 /* ControllerKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F632C9761BE44F2F008D94E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F65EA8831BDC388B00167F45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F65EA88D1BDC388B00167F45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F65EA9411BDEFC6200167F45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F632C9731BE44F2F008D94E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F632C9841BE44F6F008D94E3 /* Controller.swift in Sources */,
+				F632C9A51BE51945008D94E3 /* Connection.swift in Sources */,
+				F632C9901BE44F81008D94E3 /* AsyncSocket.m in Sources */,
+				F632C9831BE44F6F008D94E3 /* GCControllerInput.swift in Sources */,
+				F632C9821BE44F6F008D94E3 /* RemoteInput.swift in Sources */,
+				F632C9811BE44F6F008D94E3 /* ControllerInput.swift in Sources */,
+				F632C98E1BE44F81008D94E3 /* GCDAsyncUdpSocket.m in Sources */,
+				F6345F781C06696300C2ACE3 /* Gamepad.swift in Sources */,
+				F632C9861BE44F6F008D94E3 /* Copyable.swift in Sources */,
+				F632C9851BE44F6F008D94E3 /* Observable.swift in Sources */,
+				F632C9881BE44F6F008D94E3 /* ClosureTimer.swift in Sources */,
+				F632C9871BE44F6F008D94E3 /* ControllerBrowser.swift in Sources */,
+				F632C9891BE44F6F008D94E3 /* Client.swift in Sources */,
+				F632C98C1BE44F81008D94E3 /* GCDAsyncSocket.m in Sources */,
+				F632C9801BE44F6F008D94E3 /* HIDInput.swift in Sources */,
+				F632C9921BE44F81008D94E3 /* AsyncUdpSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F65EA8801BDC388B00167F45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F65EA8EA1BDED6DB00167F45 /* GCDAsyncSocket.m in Sources */,
+				F632C9A31BE51945008D94E3 /* Connection.swift in Sources */,
+				F65EA8F41BDED6E700167F45 /* AsyncUdpSocket.m in Sources */,
+				F65EA8F21BDED6E700167F45 /* AsyncSocket.m in Sources */,
+				F65EA8AD1BDC6A4500167F45 /* Copyable.swift in Sources */,
+				F65EA8A31BDC493500167F45 /* Controller.swift in Sources */,
+				F65EA8EC1BDED6DB00167F45 /* GCDAsyncUdpSocket.m in Sources */,
+				F6345F761C06696300C2ACE3 /* Gamepad.swift in Sources */,
+				F65EA8AB1BDC68AA00167F45 /* Observable.swift in Sources */,
+				F65EA8B51BDD9AF300167F45 /* GCControllerInput.swift in Sources */,
+				F65EA8B11BDD96DC00167F45 /* ControllerInput.swift in Sources */,
+				F65EA8A71BDC4EC400167F45 /* ControllerBrowser.swift in Sources */,
+				F65EA8B71BDDA1FE00167F45 /* Client.swift in Sources */,
+				F65EA8F61BDEE50A00167F45 /* ClosureTimer.swift in Sources */,
+				F6CA35EA1BE3B66600A08132 /* HIDInput.swift in Sources */,
+				F65EA8B31BDD976600167F45 /* RemoteInput.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F65EA88B1BDC388B00167F45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F65EA8951BDC388B00167F45 /* ControllerKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F65EA93E1BDEFC6200167F45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F632C9A41BE51945008D94E3 /* Connection.swift in Sources */,
+				F65EA9531BDEFCBE00167F45 /* ControllerBrowser.swift in Sources */,
+				F65EA95A1BDEFCCD00167F45 /* GCDAsyncUdpSocket.m in Sources */,
+				F65EA94F1BDEFCBE00167F45 /* GCControllerInput.swift in Sources */,
+				F65EA95C1BDEFCCD00167F45 /* AsyncSocket.m in Sources */,
+				F65EA9511BDEFCBE00167F45 /* Observable.swift in Sources */,
+				F65EA9541BDEFCBE00167F45 /* ClosureTimer.swift in Sources */,
+				F6345F771C06696300C2ACE3 /* Gamepad.swift in Sources */,
+				F65EA94E1BDEFCBE00167F45 /* RemoteInput.swift in Sources */,
+				F65EA94D1BDEFCBE00167F45 /* ControllerInput.swift in Sources */,
+				F65EA9581BDEFCCD00167F45 /* GCDAsyncSocket.m in Sources */,
+				F65EA9521BDEFCBE00167F45 /* Copyable.swift in Sources */,
+				F65EA9501BDEFCBE00167F45 /* Controller.swift in Sources */,
+				F6CA35EB1BE3B66600A08132 /* HIDInput.swift in Sources */,
+				F65EA9551BDEFCBE00167F45 /* Client.swift in Sources */,
+				F65EA95E1BDEFCCD00167F45 /* AsyncUdpSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F65EA8921BDC388B00167F45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F65EA8841BDC388B00167F45 /* ControllerKit-iOS */;
+			targetProxy = F65EA8911BDC388B00167F45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F632C97D1BE44F2F008D94E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = ControllerKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.goos.ControllerKit;
+				PRODUCT_NAME = ControllerKit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		F632C97E1BE44F2F008D94E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = ControllerKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.goos.ControllerKit;
+				PRODUCT_NAME = ControllerKit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		F65EA8971BDC388B00167F45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F65EA8981BDC388B00167F45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F65EA89A1BDC388B00167F45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = ControllerKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.goos.ControllerKit;
+				PRODUCT_NAME = ControllerKit;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F65EA89B1BDC388B00167F45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = ControllerKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.goos.ControllerKit;
+				PRODUCT_NAME = ControllerKit;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+			};
+			name = Release;
+		};
+		F65EA89D1BDC388B00167F45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ControllerKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.goos.ControllerKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F65EA89E1BDC388B00167F45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ControllerKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.goos.ControllerKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F65EA9491BDEFC6200167F45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ControllerKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.goos.ControllerKit;
+				PRODUCT_NAME = ControllerKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F65EA94A1BDEFC6200167F45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ControllerKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.goos.ControllerKit;
+				PRODUCT_NAME = ControllerKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F632C97F1BE44F2F008D94E3 /* Build configuration list for PBXNativeTarget "ControllerKit-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F632C97D1BE44F2F008D94E3 /* Debug */,
+				F632C97E1BE44F2F008D94E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F65EA87F1BDC388B00167F45 /* Build configuration list for PBXProject "ControllerKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F65EA8971BDC388B00167F45 /* Debug */,
+				F65EA8981BDC388B00167F45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F65EA8991BDC388B00167F45 /* Build configuration list for PBXNativeTarget "ControllerKit-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F65EA89A1BDC388B00167F45 /* Debug */,
+				F65EA89B1BDC388B00167F45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F65EA89C1BDC388B00167F45 /* Build configuration list for PBXNativeTarget "ControllerKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F65EA89D1BDC388B00167F45 /* Debug */,
+				F65EA89E1BDC388B00167F45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F65EA9481BDEFC6200167F45 /* Build configuration list for PBXNativeTarget "ControllerKit-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F65EA9491BDEFC6200167F45 /* Debug */,
+				F65EA94A1BDEFC6200167F45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F65EA87C1BDC388B00167F45 /* Project object */;
+}

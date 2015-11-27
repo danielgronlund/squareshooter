@@ -97,7 +97,7 @@
 }
 
 - (void)controllerBrowser:(ControllerBrowser *)browser encounteredError:(NSError * _Nonnull)error {
-    NSLog(@"Browser encountered error: %@");
+    NSLog(@"Browser encountered error: %@", error);
 }
 
 @end

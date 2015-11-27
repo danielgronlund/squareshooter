@@ -11,6 +11,8 @@
 
 @interface GameScene : SKScene <ControllerBrowserDelegate>
 
+@property (nonatomic, strong) SKLabelNode *gameAnnouncementsLabel;
+
 - (void)onControllerConnected:(void(^)(Controller *controller))controllerConnected;
 - (void)onControllerDisconnected:(void(^)(Controller *controller))controllerDisconnected;
 

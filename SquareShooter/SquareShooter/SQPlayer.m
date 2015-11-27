@@ -10,7 +10,6 @@
 
 #import "SKSpriteNode+mathAdditions.h"
 
-
 #define kDefaultHealth 100
 
 @interface SQPlayer ()
@@ -20,10 +19,12 @@
 @implementation SQPlayer
 
 - (instancetype)initWithColor:(UIColor *)color {
-    self = [super initWithImageNamed:@"character-1"];
+    self = [super initWithImageNamed:@"body"];
     if (self) {
         self.physicsBody = [[SKPhysicsBody alloc] init];
         self.physicsBody.dynamic = YES;
+        self.color = color;
+        self.colorBlendFactor = 1.0;
         
         _arm = [SKSpriteNode spriteNodeWithImageNamed:@"arm"];
         _arm.zPosition = 10;
@@ -73,7 +74,7 @@
             self.nameLabel.text = @"Unnamed player";
         }
         [self addChild:self.nameLabel];
-        self.nameLabel.position = CGPointMake(0, 100);
+        self.nameLabel.position = CGPointMake(0, 240);
     }
     self.nameLabel.xScale = 0;
     self.nameLabel.yScale = 0;
@@ -82,7 +83,7 @@
     SKAction *scaleDown = [SKAction scaleTo:0.0 duration:.2];
     SKAction *sequence = [SKAction sequence:@[wait,scaleUp,wait,scaleDown]];
     [self.nameLabel runAction:sequence];
-    
 }
+
 
 @end

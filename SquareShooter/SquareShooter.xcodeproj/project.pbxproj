@@ -15,6 +15,9 @@
 		33B34C451C08512200A40625 /* Game.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33B34C441C08512200A40625 /* Game.xcassets */; };
 		33B34C481C08512200A40625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33B34C461C08512200A40625 /* Main.storyboard */; };
 		33B34C4A1C08512200A40625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33B34C491C08512200A40625 /* Assets.xcassets */; };
+		33B34C531C08530400A40625 /* SQPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B34C521C08530400A40625 /* SQPlayer.m */; };
+		33B34C6E1C0863B800A40625 /* SQShot.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B34C6D1C0863B800A40625 /* SQShot.m */; };
+		33B34C711C0864B000A40625 /* SKSpriteNode+mathAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B34C701C0864B000A40625 /* SKSpriteNode+mathAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,12 @@
 		33B34C471C08512200A40625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33B34C491C08512200A40625 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33B34C4B1C08512200A40625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33B34C511C08530400A40625 /* SQPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPlayer.h; sourceTree = "<group>"; };
+		33B34C521C08530400A40625 /* SQPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPlayer.m; sourceTree = "<group>"; };
+		33B34C6C1C0863B800A40625 /* SQShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQShot.h; sourceTree = "<group>"; };
+		33B34C6D1C0863B800A40625 /* SQShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQShot.m; sourceTree = "<group>"; };
+		33B34C6F1C0864B000A40625 /* SKSpriteNode+mathAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKSpriteNode+mathAdditions.h"; sourceTree = "<group>"; };
+		33B34C701C0864B000A40625 /* SKSpriteNode+mathAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKSpriteNode+mathAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +76,12 @@
 				33B34C3A1C08512200A40625 /* AppDelegate.m */,
 				33B34C3C1C08512200A40625 /* GameScene.h */,
 				33B34C3D1C08512200A40625 /* GameScene.m */,
+				33B34C511C08530400A40625 /* SQPlayer.h */,
+				33B34C521C08530400A40625 /* SQPlayer.m */,
+				33B34C6F1C0864B000A40625 /* SKSpriteNode+mathAdditions.h */,
+				33B34C701C0864B000A40625 /* SKSpriteNode+mathAdditions.m */,
+				33B34C6C1C0863B800A40625 /* SQShot.h */,
+				33B34C6D1C0863B800A40625 /* SQShot.m */,
 				33B34C3F1C08512200A40625 /* GameScene.sks */,
 				33B34C411C08512200A40625 /* GameViewController.h */,
 				33B34C421C08512200A40625 /* GameViewController.m */,
@@ -159,7 +174,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				33B34C431C08512200A40625 /* GameViewController.m in Sources */,
+				33B34C531C08530400A40625 /* SQPlayer.m in Sources */,
 				33B34C3B1C08512200A40625 /* AppDelegate.m in Sources */,
+				33B34C711C0864B000A40625 /* SKSpriteNode+mathAdditions.m in Sources */,
+				33B34C6E1C0863B800A40625 /* SQShot.m in Sources */,
 				33B34C3E1C08512200A40625 /* GameScene.m in Sources */,
 				33B34C381C08512200A40625 /* main.m in Sources */,
 			);

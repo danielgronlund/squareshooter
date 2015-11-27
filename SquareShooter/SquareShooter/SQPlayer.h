@@ -15,10 +15,17 @@
 @end
 
 @interface SQPlayer : SKSpriteNode
-- (instancetype)initWithColor:(UIColor *)color;
 @property (nonatomic) CGVector velocity;
 @property (nonatomic, assign) id <SQPlayerDelegate> delegate;
+@property (nonatomic) float health;
+@property (nonatomic, strong) SKLabelNode *nameLabel;
+@property (nonatomic) id specialAblility;
+@property (nonatomic, strong) NSString *playerName;
 
+- (instancetype)initWithColor:(UIColor *)color;
 - (void)updatePhysics;
+- (CGPoint)initialShotPosition;
+
+- (void)showNameLabel;
 
 @end

@@ -24,8 +24,11 @@
 -(void)didMoveToView:(SKView *)view {
     /* Setup your scene here */
     [self setUpPlayer];
-    self.physicsWorld.gravity = CGVectorMake(0.0,  -.5);
+
     self.player.delegate = self;
+    self.player.yScale = .2;
+    self.player.xScale = .2;
+    self.physicsWorld.gravity = CGVectorMake(0.0,  -.5 * self.player.yScale);
     self.activeShots = [NSMutableArray new];
 }
 
@@ -44,7 +47,6 @@
 {
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
-        NSLog(@"%f,%f",location.x, location.y);
         
         self.player.velocity =  CGVectorMake(((location.x - 512) *.01),((location.y - 256) * .01));
         self.lastTouch = location;
@@ -83,6 +85,7 @@
     //    self.player.physicsBody.linearDamping = 2.0;
     //    self.player.physicsBody.restitution = 0;
     [self addChild:self.player];
+    [self.player showNameLabel];
 }
 
 
@@ -95,8 +98,10 @@
 
 - (void)player:(SQPlayer *)player didFireInDirection:(CGFloat)angle
 {
-    SQShot *shot = [[SQShot alloc] initWithRotation:angle andSpeed:1000];
-    shot.position = player.position;
+    SQShot *shot = [[SQShot alloc] initWithRotation:angle andSpeed:100];
+    shot.position = [player initialShotPosition];
+    shot.yScale = player.yScale;
+    shot.xScale = player.xScale;
     [self addChild:shot];
     [self.activeShots addObject:shot];
 }

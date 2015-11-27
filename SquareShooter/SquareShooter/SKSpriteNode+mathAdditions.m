@@ -26,7 +26,6 @@
     float x = magnitude * cos(angle);
     float y = magnitude * sin(angle);
     CGPoint point = CGPointMake(x, y);
-    NSLog(@"Made a CGPoint of X: %f and Y: %f.", point.x, point.y);
     return point;
 }
 

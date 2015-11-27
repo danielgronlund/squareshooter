@@ -20,19 +20,17 @@
 @implementation SQPlayer
 
 - (instancetype)initWithColor:(UIColor *)color {
-    self = [super initWithImageNamed:@"body"];
+    self = [super initWithImageNamed:@"character-1"];
     if (self) {
         self.physicsBody = [[SKPhysicsBody alloc] init];
         self.physicsBody.dynamic = YES;
         
-        _arm = [SKSpriteNode spriteNodeWithColor:[SKColor redColor] size:CGSizeMake(50, 10)];
+        _arm = [SKSpriteNode spriteNodeWithImageNamed:@"arm"];
         _arm.zPosition = 10;
-        _arm.anchorPoint = CGPointMake(0, .5);
+        _arm.position = CGPointMake(20,30);
+        _arm.anchorPoint = CGPointMake(.03, .8);
         [self addChild:_arm];
         self.health = kDefaultHealth;
-
-
-        
     }
     return self;
 }
@@ -64,7 +62,6 @@
     CGPoint shotOffset = [self getVectorFromAngle:self.arm.zRotation AndMagnitude:(40) * self.yScale];
     return CGPointMake(self.position.x + self.arm.position.x + shotOffset.x, self.position.y + self.arm.position.y + shotOffset.y);
 }
-
 
 - (void)showNameLabel
 {

@@ -8,13 +8,7 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate () <ControllerBrowserDelegate>
-
-@property (nonatomic, strong) ControllerBrowser *controllerBrowser;
-
-@property (nonatomic, strong) NSMutableArray *controllers;
-@property (nonatomic, strong) NSMutableArray *controllerConnectedCallbacks;
-@property (nonatomic, strong) NSMutableArray *controllerDisconnectedCallbacks;
+@interface AppDelegate ()
 
 @end
 
@@ -26,15 +20,8 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.controllers = [NSMutableArray array];
-    self.controllerConnectedCallbacks = [NSMutableArray array];
-    self.controllerDisconnectedCallbacks = [NSMutableArray array];
-
-    self.controllerBrowser = [[ControllerBrowser alloc] initWithName:@"SquareShooter"];
-    self.controllerBrowser.delegate = self;
-    [self.controllerBrowser start];
     
-#ifdef DEBUG
+#if 0
     for (NSString* family in [UIFont familyNames])
     {
         NSLog(@"%@", family);
@@ -68,36 +55,6 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-- (void)onControllerConnected:(void (^)(Controller *))controllerConnected {
-    [self.controllerConnectedCallbacks addObject:controllerConnected];
-}
-
-- (void)onControllerDisconnected:(void (^)(Controller *))controllerDisconnected {
-    [self.controllerConnectedCallbacks addObject:controllerDisconnected];
-}
-
-#pragma mark - ControllerBrowserDelegate
-- (void)controllerBrowser:(ControllerBrowser *)browser controllerConnected:(Controller *)controller type:(enum ControllerType)type {
-    for (void (^callback)(Controller *controller) in self.controllerConnectedCallbacks) {
-        callback(controller);
-    }
-    [self.controllers addObject:controller];
-    controller.dpad.valueChangedHandler = ^(float xAxis, float yAxis) {
-        NSLog(@"%f, %f", xAxis, yAxis);
-    };
-}
-
-- (void)controllerBrowser:(ControllerBrowser *)browser controllerDisconnected:(Controller *)controller {
-    for (void (^callback)(Controller *controller) in self.controllerDisconnectedCallbacks) {
-        callback(controller);
-    }
-    [self.controllers removeObject:controller];
-}
-
-- (void)controllerBrowser:(ControllerBrowser *)browser encounteredError:(NSError * _Nonnull)error {
-    NSLog(@"Browser encountered error: %@", error);
 }
 
 @end

@@ -7,7 +7,11 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import <ControllerKit/ControllerKit.h>
 
-@interface GameScene : SKScene
+@interface GameScene : SKScene <ControllerBrowserDelegate>
+
+- (void)onControllerConnected:(void(^)(Controller *controller))controllerConnected;
+- (void)onControllerDisconnected:(void(^)(Controller *controller))controllerDisconnected;
 
 @end

@@ -7,16 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ControllerKit/ControllerKit.h>
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 - (instancetype)sharedInstance;
 
 @property (strong, nonatomic) UIWindow *window;
-
-- (void)onControllerConnected:(void(^)(Controller *controller))controllerConnected;
-- (void)onControllerDisconnected:(void(^)(Controller *controller))controllerDisconnected;
 
 @end
 

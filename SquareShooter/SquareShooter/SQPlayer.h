@@ -11,10 +11,12 @@
 @class SQPlayer;
 @protocol  SQPlayerDelegate <NSObject>
 - (void)player:(SQPlayer *)player didFireInDirection:(CGFloat)angle;
+- (void)playerDidGetKilled:(SQPlayer *)player byPlayer:(SQPlayer *)player2;
 - (BOOL)touchIsDown;
 @end
 
 @interface SQPlayer : SKSpriteNode
+@property (nonatomic) int score;
 @property (nonatomic) CGVector velocity;
 @property (nonatomic, assign) id <SQPlayerDelegate> delegate;
 @property (nonatomic) float health;

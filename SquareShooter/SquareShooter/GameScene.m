@@ -11,9 +11,12 @@
 #import "SQShot.h"
 #import "SKSpriteNode+mathAdditions.h"
 
+#define kGravityFactor .4
 
 @interface GameScene () <SQPlayerDelegate>
 @property (nonatomic, strong) NSMutableArray *players;
+@property (nonatomic, strong) NSMutableArray *deadPlayers;
+@property (nonatomic, strong) NSMutableArray *clouds;
 @property (nonatomic) double playerRotationalForce;
 @property (nonatomic) BOOL touchIsDown;
 @property (nonatomic) CGPoint lastTouch;
@@ -29,6 +32,13 @@
 @implementation GameScene
 
 -(void)didMoveToView:(SKView *)view {
+    self.deadPlayers = [NSMutableArray new];
+    self.gameAnnouncementsLabel = [[SKLabelNode alloc] initWithFontNamed:@"ArialRoundedMTBold"];
+    self.gameAnnouncementsLabel.fontSize = 80;
+    self.gameAnnouncementsLabel.yScale = 0;
+    self.gameAnnouncementsLabel.xScale = 0;
+    [self addChild:self.gameAnnouncementsLabel];
+    self.gameAnnouncementsLabel.position = CGPointMake(0, 240);
     
     self.controllers = [NSMutableArray array];
     self.controllerConnectedCallbacks = [NSMutableArray array];
@@ -39,12 +49,31 @@
     self.controllerBrowser.delegate = self;
     [self.controllerBrowser start];
     
+    self.clouds = [NSMutableArray new];
     
+   
     /* Setup your scene here */
-
-
+    
+    [self setUpPlayerWithController:nil];
+    
     self.players = [NSMutableArray new];
-
+    self.physicsWorld.gravity = CGVectorMake(0.0,  -.5 * kGravityFactor);
+    
+    //[self announceMessage:@"Welcome"];
+    self.gameAnnouncementsLabel.alpha = .7;
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    
+    self.gameAnnouncementsLabel.position = CGPointMake(screenSize.width / 2, 100);
+    
+    for (int i = 0; i < 6;  i ++ ) {
+        SKSpriteNode *cloud = [SKSpriteNode spriteNodeWithImageNamed:@"cloud"];
+        [self addChild:cloud];
+        cloud.position = CGPointMake((cloud.size.width * i) + 100 + (arc4random() % 400), 300 + arc4random() % ((int)screenSize.height - 300));
+        [self.clouds addObject:cloud];
+        cloud.zPosition = -5;
+        
+    }
+    
 }
 
 //-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -75,6 +104,7 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     
+    [self updateClouds];
     for (SQPlayer *player in self.players) {
         [player updatePhysics];
     }
@@ -93,6 +123,14 @@
     //  if (!self.touchIsDown) self.playerRotationalForce = self.playerRotationalForce * .08;
 }
 
+- (void)updateClouds
+{
+    for (SKSpriteNode *cloud in self.clouds) {
+        cloud.position = CGPointMake(cloud.position.x - 1, cloud.position.y);
+        if (cloud.position.x < -(cloud.size.width / 2))cloud.position = CGPointMake(1920 + (cloud.size.width / 2),  400 + arc4random() % 500);
+    }
+}
+
 - (void)setUpPlayerWithController:(Controller *)controller
 {
     NSLog(@"Adding player for controller: %d", controller.index);
@@ -103,9 +141,7 @@
         player.name = [NSString stringWithFormat:@"Player %ld", (unsigned long)controller.index];
     }
     player.delegate = self;
-    player.yScale = .2;
-    player.xScale = .2;
-    self.physicsWorld.gravity = CGVectorMake(0.0,  -.5 * player.yScale);
+ 
     self.activeShots = [NSMutableArray new];
     
     controller.leftThumbstick.valueChangedHandler = ^(float xAxis, float yAxis) {
@@ -133,11 +169,20 @@
     //    self.player.physicsBody.linearDamping = 2.0;
     //    self.player.physicsBody.restitution = 0;
     [self addChild:player];
+    player.yScale = kGravityFactor;
+    player.xScale = kGravityFactor;
     [player showNameLabel];
     
     [self.players addObject:player];
 }
 
+- (void)endGame
+{
+    SQPlayer *remainingPlayer = self.players.firstObject;
+    if (remainingPlayer) {
+        [self announceMessage:[NSString stringWithFormat:@"%@ won",remainingPlayer.name]];
+    }
+}
 
 #pragma markf - SQPlayerDelegate implementation
 - (BOOL)touchIsDown
@@ -155,10 +200,37 @@
     [self.activeShots addObject:shot];
 }
 
+- (void)announceMessage:(NSString *)string
+{
+    self.gameAnnouncementsLabel.text = string;
+    
+    self.gameAnnouncementsLabel.xScale = 0;
+    self.gameAnnouncementsLabel.yScale = 0;
+    SKAction *scaleUp = [SKAction scaleTo:1.0 duration:.2];
+    SKAction *wait = [SKAction waitForDuration:1.0];
+    SKAction *scaleDown = [SKAction scaleTo:0.0 duration:.2];
+    SKAction *sequence = [SKAction sequence:@[scaleUp,wait,scaleDown]];
+    [self.gameAnnouncementsLabel runAction:sequence];
+    
+}
+
+- (void)playerDidGetKilled:(SQPlayer *)player byPlayer:(SQPlayer *)player2
+{
+    [self announceMessage:[NSString stringWithFormat:@"Player %@ got smashed by %@", player.name, player2.name]];
+    [player removeFromParent];
+    [self.players removeObject:player];
+    [self.deadPlayers addObject:player];
+    player2.score += 1;
+    if (self.players.count == 1) {
+        [self endGame];
+    }
+}
+
 #pragma mark - ControllerKit Delegate
 
 - (void)onControllerConnected:(void (^)(Controller *))controllerConnected {
     [self.controllerConnectedCallbacks addObject:controllerConnected];
+    [self announceMessage:[NSString stringWithFormat:@"Player %d joined", (int)[self.controllers count]]];
 }
 
 - (void)onControllerDisconnected:(void (^)(Controller *))controllerDisconnected {
@@ -189,5 +261,6 @@
 - (void)controllerBrowser:(ControllerBrowser *)browser encounteredError:(NSError * _Nonnull)error {
     NSLog(@"Browser encountered error: %@",error);
 }
+
 
 @end
